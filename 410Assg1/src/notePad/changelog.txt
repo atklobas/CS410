@@ -1,0 +1,14 @@
+changed all Jmenu and JMenu item variables from 1 and 2 letter abbreviations to camelcase versions of what they were because they were not descriptive
+
+I put all the menu building in it's own private method because it was bloating the constuctor and logically independant (long method)
+
+I removed the actionlistener method and replaced it with a series of direct lamda calls so the program flow was more intuitive and unreladed methods didn't have to used the same code path (long method)
+
+I removed the menuItem "undo" because it was an unused feature(dead code)
+
+I created a new class notepad controller to seperate the control logic from the display logic
+(copy and paste stay in the view, they are special)
+
+I created a new class FileModel to seperate interactions with the file system and keep the state of recent files consistant
+
+I created a new class ReplaceWindow to give the user something graphical to interact with while doing find/replace
